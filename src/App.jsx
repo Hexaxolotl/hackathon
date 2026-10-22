@@ -1,6 +1,8 @@
 import "@picocss/pico/css/pico.css"
 import useFetchData from "./useFetchData"
 import RecordCard from './RecordCard.jsx'
+import PokemonA from "./PokemonA.jsx"
+import PokemonB from "./PokemonB.jsx"
 
 
 function App() {
@@ -22,8 +24,5 @@ function App() {
   )
 }
 
-function fighterA () {
-  
-}
 
 export default App
