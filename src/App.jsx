@@ -1,6 +1,5 @@
-import "@picocss/pico/css/pico.css"
+import "nes.css/css/nes.min.css";
 import useFetchData from "./useFetchData"
-import RecordCard from './RecordCard.jsx'
 import PokemonA from "./PokemonA.jsx"
 import PokemonB from "./PokemonB.jsx"
 
@@ -13,13 +12,16 @@ function App() {
     }
   
   console.log(records)
-  return (
 
-    <div>
+
+  return (
+    <div className="container">
       <h1>Pokedex Team Battle</h1>
       <p>{error}</p>
-      {records.map((record)=><RecordCard key={record.id} record ={record} />)}
       <p>A Trainer will  be able to compare pokemon stats and see who would win soly based on the pokemon's stats.</p>
+      <PokemonA />
+      <PokemonB />
+    
     </div>
   )
 }

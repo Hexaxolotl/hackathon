@@ -1,5 +1,5 @@
 import useFetchData from "./useFetchData";
-import {useState} from "react';
+import {useState} from "react"
 
 function PokemonB () {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -26,6 +26,12 @@ function PokemonB () {
             setCurrentIndex(currentIndex- 1)
         }
     }
+
+        //choosePokemon is saving the currentIndex and sending it to app.jsx
+    const choosePokemon =() => {{
+        console.log("you chose:",p)
+    }
+    }
     return (
         <div className="pokemon-card">
             <img src={p.image} alt={p.name} id="pokeImg" />
@@ -34,6 +40,7 @@ function PokemonB () {
             <p>Stats:</p> <br></br>
             <p> HP: {p.hp} Attack: {p.attack} Defense: {p.defense}</p>
             <button onClick={nextPokemon}>Next</button>
+            <button onClick={choosePokemon}>Choose</button>
             <button onClick={previousPokemon}>Back</button>
         </div>
     )
