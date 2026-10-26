@@ -1,9 +1,10 @@
 import useFetchData from "./useFetchData";
 import {useState} from "react"
 
-function PokemonA () {
+function PokemonA (props) {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const {records, loading, error} = useFetchData("https://student-data-api.alana-duke25.workers.dev/api/v1/datasets/pokedex/records?limit=10")
+    const setCurrentPokemon = props.setCurrentPokemon
+    const {records, loading, error} = useFetchData("https://student-data-api.alana-duke25.workers.dev/api/v1/datasets/pokedex/records?limit=100")
     
     if (loading)return <div> loading Pokemon...</div>
     if (error) return <div> Error: {error}</div>
@@ -29,7 +30,9 @@ function PokemonA () {
     //choosePokemon is saving the currentIndex and sending it to app.jsx
     const choosePokemon =() => {{
         console.log("you chose:",p)
+        setCurrentPokemon(p)
     }}
+    
     return (
         <div className="grid">
             <img src={p.image} alt={p.name} id="pokeImg" />

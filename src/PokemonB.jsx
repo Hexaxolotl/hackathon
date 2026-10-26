@@ -3,7 +3,7 @@ import {useState} from "react"
 
 function PokemonB () {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const {records, loading, error} = useFetchData("https://student-data-api.alana-duke25.workers.dev/api/v1/datasets/pokedex/records?limit=10")
+    const {records, loading, error} = useFetchData("https://student-data-api.alana-duke25.workers.dev/api/v1/datasets/pokedex/records?limit=100")
     
     if (loading)return <div> loading Pokemon...</div>
     if (error) return <div> Error: {error}</div>
@@ -30,7 +30,7 @@ function PokemonB () {
         //choosePokemon is saving the currentIndex and sending it to app.jsx
     const choosePokemon =() => {{
         console.log("you chose:",p)
-    }
+     }
     }
     return (
         <div className="pokemon-card">
