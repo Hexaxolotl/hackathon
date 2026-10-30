@@ -17,7 +17,7 @@ function App() {
   console.log(currentPlayerPokemon)
   
  function battleButton (){
-  if (currentPokemon (hp))
+  //if (currentPokemon (hp))
   console.log("battleButton")
  }
 
